@@ -160,7 +160,8 @@ learning_rate_reduction= ReduceLROnPlateau(monitor='val_accuracy', patience=2, v
 
 #-----------------------------------------------------------------------------------
 
-history= model.fit(datagen.flow(x_train, y_train, batch_size=32), epochs=5, validation_data=datagen.flow(x_val, y_val), callbacks=learning_rate_reduction)
+history= model.fit(datagen.flow(x_train, y_train, batch_size=32), epochs=15, validation_data=datagen.flow(x_val, y_val), callbacks=learning_rate_reduction)
+#       Number of epochs can be significantly increased for more powerful computing systems
 
 #--------------------------------------------------------------------------------------
 
